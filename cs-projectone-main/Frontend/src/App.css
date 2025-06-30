@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #e0f2fe, #f3e8ff);
+  color: #1f2937;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}

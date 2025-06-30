@@ -1,0 +1,270 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* WRAPPER */
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (min-width: 1024px) {
+  .signup-wrapper {
+    flex-direction: row;
+  }
+}
+
+/* LEFT FORM SIDE */
+.signup-left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to bottom right, #4f46e5, #9333ea);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 2rem;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Input Styling */
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  background: white;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  z-index: 10;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.toggle-password:hover {
+  color: #4f46e5;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 16px;
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}
+
+/* OTP Styling */
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.otp-input {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.otp-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+/* RIGHT SIDE - INFO */
+.signup-right {
+  flex: 1;
+  background: linear-gradient(to bottom right, #4f46e5, #9333ea);
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.minimal-info {
+  text-align: center;
+}
+
+.signup-right .form-title.white {
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 1rem;
+}
+
+.signup-right .form-subtitle.light {
+  color: #e0e7ff;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.benefits-list {
+  list-style: none;
+  font-size: 16px;
+  padding: 0;
+  color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefits-list li::before {
+  content: "✔️";
+  margin-right: 8px;
+  color: #a5f3fc;
+}
+
+/* Step Indicator */
+/* Previous CSS remains the same, just adding the step indicator adjustment */
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d5db;
+  transition: background 0.3s ease;
+}
+
+.step-circle.active {
+  background: #4f46e5;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-container {
+  position: relative;
+  min-height: 400px;
+}
+
+.step-panel {
+  width: 100%;
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .otp-input {
+    width: 40px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .signup-left,
+  .signup-right {
+    padding: 2rem;
+  }
+}
